@@ -1,0 +1,112 @@
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand"routerLink="/usernav">Capstone</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/usernav">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/about">About Us </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/sendbookingr">Booking</a>
+        </li>
+        <li  class="nav-item active"><a class="nav-link active" (click) ="getAllProp()">All Properties</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Property Type
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item " (click)= "getPropType('flat')">Flats</a></li>
+            <li><a class="dropdown-item " (click) ="getPropType('villa')">Villas</a></li>
+            <li><a class="dropdown-item " (click) ="getPropType('room')">Rooms</a></li>
+            <li><a class="dropdown-item " (click) ="getPropType('bunglow')">Bunglow</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Property Feature
+          </a>
+          <ul class="dropdown-menu">
+
+            <li><a class="dropdown-item " (click)= "getPropFeature('Bachlore')">Bachlore</a></li>
+            <li><a class="dropdown-item " (click)= "getPropFeature('Beach')">Beach</a></li>
+            <li><a class="dropdown-item " (click)= "getPropFeature('Garden')">Garden</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Property By city
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item " (click) ="getPropCity('Indore')">Indore</a></li>
+            <li><a class="dropdown-item " (click) ="getPropCity('Dewas')">Dewas</a></li>
+            <li><a class="dropdown-item " (click) ="getPropCity('Bhopal')">Bhopal</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Top Rated By Category
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item " (click) ="getPropCategoryTopRated('furnished')">Furnished</a></li>
+            <li><a class="dropdown-item" (click) ="getPropCategoryTopRated('semifurnished')">Semi Furnished</a></li>
+            <li><a class="dropdown-item " (click) ="getPropCategoryTopRated('unfurnished')">UnFurnished</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/mycart">MyCart()</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" (click)="getBookingStatus()">Booking Status</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <button type="button" class="btn btn-danger" routerLink="/">Logout</button>
+</nav>
+<div class="welcome">
+  <h3>Welcome Back Dear Book property to get 10% instant discount !!!! </h3>
+</div>
+<div class="bookings" id="bookingresult">
+  <h2>My Booking Status</h2>
+  <div class="card" style="width: 35rem;">
+    <ul class="list-group list-group-flush" *ngFor ="let p of bookingdata">
+      <li class="list-group-item bookingId " >Booking Id :   {{p.bookingId}}</li>
+      <li class="list-group-item " >User Id    :       {{p.userId}}</li>
+      <li class="list-group-item" >Property Id: {{p.propertyId}}</li>
+      <li class="list-group-item date">Check In Date : {{p.checkInDate}}</li>
+      <li class="list-group-item date">Check Out Date : {{p.checkOutDate}}</li>
+      <li class="list-group-item ">Booking Status : {{p.bookingStatus}}</li>
+    </ul>
+
+</div>
+</div>
+<div class="property" id="result">
+    <div class="card" style="width: 35rem;">
+      <ul class="list-group list-group-flush" *ngFor ="let p of propertydata">
+        <!-- <li class="list-group-item category" >Category     :       {{p.propertyCategory}}</li> -->
+        <li class="list-group-item category" >Type : {{p.propertyType}}</li>
+        <li class="list-group-item">City : {{p.propertyCity}}</li>
+        <!-- <li class="list-group-item" >Features : {{p.feature}}</li> -->
+        <li class="list-group-item">Rating : {{p.rating}}</li>
+        <li class="list-group-item price">Price : {{p.propertyPrice}} /night</li>
+        <!-- <li class="list-group-item ">Owner name : {{p.ownerName}}</li> -->
+        <div class="propButton">
+          <button type="submit " class="btn btn-outline-info reservebtn " (click)="propVIewById(p.propertyId)">view</button>
+        <button type="submit " class="btn btn-outline-primary reservebtn  " routerLink="/sendbookingr">Reserve</button>
+        <button type="button" class="btn btn-outline-info reservebtn" routerLink="/usernav">Add To cart</button>
+      </div>
+      </ul>
+</div>
+</div>
+
+

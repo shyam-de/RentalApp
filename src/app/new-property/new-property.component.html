@@ -1,0 +1,41 @@
+<app-admin-nav></app-admin-nav>
+<div class="propdiv">
+  <form (ngSubmit)="save()">
+    <h1>Add new Property.</h1>
+    <div class="form-row" >
+      <div class="form-group col-md-6">
+        <label for="inputType">Type</label>
+        <input type="text" class="form-control" name="type" placeholder="Enter  Type" [(ngModel)]="propObj.propertyType">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputCategory">Category</label>
+        <input type="text" class="form-control" name="category" placeholder="Enter Category" [(ngModel)]="propObj.propertyCategory">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputCity">City </label>
+        <input type="text" class="form-control" name="city" placeholder="city" [(ngModel)]="propObj.propertyCity">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputPrice">Price</label>
+        <input type="text" class="form-control" name = "price" placeholder="Enter Price " [(ngModel)]="propObj.propertyPrice">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputOwner">Owner Name</label>
+        <input type="text" class="form-control" name = "ownerName" placeholder="Enter Owner NAme" [(ngModel)]="propObj.ownerName">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputFeature">Feature</label>
+        <input type="text" class="form-control" name = "feature" placeholder="Enter feature" [(ngModel)]="propObj.feature">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputRatting">Ratting</label>
+        <input type="text" class="form-control" name = "ratting" placeholder="Enter Ratting" [(ngModel)]="propObj.rating">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+    <button type="button" class="btn btn-danger" routerLink="/adminNav">Cancel</button>
+  </form>
+  </div>
+

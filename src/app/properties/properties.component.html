@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<div class="propertiesdiv">
+<div class="card" style="width: 35rem;">
+  <ul class="list-group list-group-flush" *ngFor ="let p of propertydata">
+    <li class="list-group-item category" >Type : {{p.propertyType}}</li>
+        <li class="list-group-item">City : {{p.propertyCity}}</li>
+        <!-- <li class="list-group-item" >Features : {{p.feature}}</li> -->
+        <li class="list-group-item">Rating : {{p.rating}}</li>
+        <li class="list-group-item price">Price : {{p.propertyPrice}} /night</li>
+  </ul>
+</div>
+<button type="button" class="btn btn-danger" routerLink="/">Back</button>
+</div>

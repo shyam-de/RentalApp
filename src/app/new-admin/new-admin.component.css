@@ -1,0 +1,17 @@
+.admindiv{
+
+  padding: 5%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(108, 101, 214);
+}
+
+.btn{
+  margin-top: 2%;
+  margin-left: 25%;
+  padding: 1%;
+}
+
+.form-group{
+  padding: 20px;
+}

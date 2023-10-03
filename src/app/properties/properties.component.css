@@ -1,0 +1,28 @@
+.propertiesdiv{
+  padding: 5%;
+  padding-left: 35%;
+  align-items: center;
+  background-color: rgb(84, 80, 194);
+
+}
+.card{
+  padding: 3%;
+}
+.list-group , .list-group-flush{
+  padding-top: 5px;
+}
+.list-group-item{
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  text-align:center;
+  padding-top: 5px
+
+}
+.category{
+  color: rgb(170, 20, 70);
+
+}
+.price{
+  color: blue;
+}

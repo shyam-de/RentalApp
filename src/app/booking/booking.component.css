@@ -1,0 +1,20 @@
+.bookingdiv{
+
+  padding: 5%;
+  height: fit-content;
+  margin-bottom: 0%;
+
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(108, 101, 214);
+}
+
+.btn{
+  padding: 1%;
+  margin-top: 2%;
+  margin-left: 25%;
+}
+
+.form-group{
+  padding: 8px;
+}

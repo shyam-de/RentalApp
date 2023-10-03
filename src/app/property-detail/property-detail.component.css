@@ -1,0 +1,16 @@
+.property{
+  align-items: center;
+  background-color: rgb(84, 80, 194);
+ padding-left: 30%;
+
+}
+.category{
+  color: rgb(170, 20, 70);
+
+}
+.price{
+  color: blue;
+}
+.propId{
+  color: red;
+}

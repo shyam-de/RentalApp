@@ -1,0 +1,66 @@
+.appheading {
+  justify-content: center;
+  align-items:end;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  padding-left: 40%;
+  background-color: rgb(21, 15, 192);
+  color: azure;
+}
+
+.appslogan {
+  justify-content: center;
+  align-items: center;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  padding-left: 30%;
+  background-color: rgb(238, 233, 233);
+  color: rgb(48, 12, 224);
+}
+
+.property{
+  padding-left: 30%;
+  background-color: rgb(84, 80, 194);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.card{
+  padding: 3%;
+}
+.list-group , .list-group-flush{
+  padding-top: 5px;
+}
+.list-group-item{
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  text-align:center;
+  padding-top: 5px
+
+}
+.category{
+  color: rgb(170, 20, 70);
+
+}
+.price{
+  color: blue;
+}
+/* .propButton{
+  padding: 10px;
+  align-items: center;
+} */
+.reservebtn{
+  padding: 10px;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+.carousel-inner{
+  height:300px;
+  width:fit-content;
+  padding-left: 20%;
+}
+.welcome{
+  color: blue;
+}

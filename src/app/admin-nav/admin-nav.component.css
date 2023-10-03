@@ -1,0 +1,54 @@
+
+.carousel-inner{
+  height:300px;
+  width:fit-content;
+  padding-left: 20%;
+}
+.welcome{
+  color: blue;
+}
+.bookings{
+  align-items: center;
+  background-color: rgb(84, 80, 194);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.property{
+
+  align-items: center;
+  background-color: rgb(84, 80, 194);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.date{
+  color: blue;
+}
+.confirmbtn{
+  padding: 10px;
+  margin-top: 2%;
+  margin-left: 40%;
+
+}
+.bookingId{
+  color: brown;
+}
+.updatebtn{
+  padding: 10px;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.backtohome{
+
+  padding: 2%;
+
+}
+.card{
+  margin-left: 10%;
+}

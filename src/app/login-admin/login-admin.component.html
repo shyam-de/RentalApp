@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div class="adminlogin">
+<form (ngSubmit)="adminLogin()">
+<h1> Admin LogIn Page</h1>
+  <div class="form-group col-md-6">
+    <label for="exampleInputEmail1">Admin name</label>
+    <input type="text" class="form-control" name="adminName" placeholder="Enter Admin Name" [(ngModel)]="adminObj.name">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="InputPassword">Password</label>
+    <input type="password" class="form-control" name="InputPassword" placeholder="Password" [(ngModel)]="adminObj.password">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="button" class="btn btn-danger" routerLink="/">cancel</button>
+</form>
+</div>
+
+
+

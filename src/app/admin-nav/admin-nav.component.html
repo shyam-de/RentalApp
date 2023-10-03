@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/adminNav">Capstone</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/adminNav">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">About Us </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" (click)="getAllBooking()">All Bookings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" (click)="getAllProp()">All Properties </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/addproperty">AddNewProperty</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <button type="button" class="btn btn-danger" routerLink="/">Logout</button>
+</nav>
+<div class="welcome"><h3>Welocme Admin Have A great Earning </h3></div>
+
+<div class="grid-container">
+      <div class="grid-child">
+
+        <div class="bookings" id="result">
+        <h2> All Booking Details</h2>
+        <div class="card" style="width: 35rem;">
+          <ul class="list-group list-group-flush" *ngFor ="let p of bookingdata">
+            <li class="list-group-item bookingId " >Booking Id :   {{p.bookingId}}</li>
+            <li class="list-group-item " >User Id    :       {{p.userId}}</li>
+            <li class="list-group-item" >Property Id: {{p.propertyId}}</li>
+            <li class="list-group-item date">Check In Date : {{p.checkInDate}}</li>
+            <li class="list-group-item date">Check Out Date : {{p.checkOutDate}}</li>
+            <li class="list-group-item ">Booking Status : {{p.bookingStatus}}</li>
+            <div class="propButton">
+            <button type="submit " class="btn btn-outline-success confirmbtn  " (click)="confirmBooking(p.bookingId) ">Confirm Booking</button>
+          </div>
+          </ul>
+          <button type="button" class="btn btn-outline-danger backtohome" routerLink="adminNav">Back To Home</button>
+      </div>
+      </div>
+      </div>
+      <div class="grid-child">
+        <div class="property" id="result">
+
+        <h2>All Properties Details</h2>
+        <div class="card" style="width: 35rem;">
+          <ul class="list-group list-group-flush" *ngFor ="let p of propertydata">
+            <!-- <li class="list-group-item category" >Property Id    :       {{p.propertyId}}</li> -->
+            <li class="list-group-item category" >Category   :   {{p.propertyCategory}}</li>
+            <li class="list-group-item" >Type : {{p.propertyType}}</li>
+            <li class="list-group-item">City : {{p.propertyCity}}</li>
+            <!-- <li class="list-group-item" >Features : {{p.feature}}</li> -->
+            <li class="list-group-item">Rating : {{p.rating}}</li>
+            <!-- <li class="list-group-item price">Price : {{p.propertyPrice}} night</li> -->
+            <!-- <li class="list-group-item ">Owner name {{p.ownerName}}</li> -->
+            <div class="propButton">
+            <button type="submit " class="btn btn-outline-info updatebtn " (click)="propVIewById(p.propertyId)">view</button>
+            <button type="submit " class="btn btn-outline-info updatebtn " (click)="propUpdate(p.propertyId)">Update</button>
+            <button type="button" class="btn btn-outline-danger updatebtn" (click)="propDelete(p.propertyId)">Delete</button>
+          </div>
+          </ul>
+          <button type="button" class="btn btn-outline-danger backtohome" routerLink="adminNav">Back To Home</button>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+

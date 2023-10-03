@@ -1,0 +1,15 @@
+.about{
+  margin: 1%;
+  margin-left: 10%;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  height: 300px;
+  text-decoration: dashed;
+  padding: 5%;
+  outline: auto;
+  outline-color: blue;
+  border-radius: 30%;
+
+  border-width: 20px;
+}
